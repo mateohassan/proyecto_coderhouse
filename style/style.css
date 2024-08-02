@@ -1,0 +1,53 @@
+body {
+    font-family:Inconsolata;
+    font-size: large;
+}
+
+header {
+    font-size: larger;
+}
+
+footer {
+    font-size: larger;
+}
+
+.marca {
+    font-family:Caveat;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.logo {
+    width: 5%;
+}
+
+.imagenesExtra {
+    width: 30%;
+}
+
+p {
+    width: 60%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    background-color: darkblue;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+
+header {
+    background-color: deepskyblue;
+}
+
+main {
+    background-color: lightskyblue;
+}
+
+footer {
+    background-color: dodgerblue;
+}
