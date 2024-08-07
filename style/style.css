@@ -1,4 +1,7 @@
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family:Inconsolata, monospace;
     font-size: large;
 }
@@ -8,17 +11,28 @@ header {
 }
 
 footer {
+    border: none;
     font-size: larger;
+}
+
+main {
+    flex-grow: 1;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
+}
+
+.navbar-brand {
+    max-width: 200px;
 }
 
 .marca {
     font-family:Caveat;
     font-weight: 700;
-    font-size: 50px;
+    font-size: 2em;
 }
 
 .logo {
-    width: 5%;
+    width: 70px;
 }
 
 .imagenesExtra {
@@ -40,6 +54,7 @@ button {
     font-size: 16px;
 }
 
+
 header {
     background-color: deepskyblue;
 }
@@ -51,4 +66,8 @@ main {
 footer {
     background-color: dodgerblue;
 }
-/*REORGANIZAR EL CODIGO PARA QUE SEA MAS LEGIBLE*/
+/*REORGANIZAR EL CODIGO PARA QUE SEA MAS LEGIBLE*/  
+
+nav {
+    color: firebrick;
+}
