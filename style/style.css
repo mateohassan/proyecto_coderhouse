@@ -8,17 +8,21 @@ body {
 
 header {
     font-size: larger;
+    background-color: deepskyblue;
+}
+
+
+main {
+    flex-grow: 1;    
+    background-color: lightskyblue;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
 }
 
 footer {
     border: none;
     font-size: larger;
-}
-
-main {
-    flex-grow: 1;
-    border-top: 3px solid gray;
-    border-bottom: 3px solid gray;
+    background-color: dodgerblue;
 }
 
 .navbar-brand {
@@ -39,35 +43,70 @@ main {
     width: 30%;
 }
 
-p {
-    width: 60%;
-}
-
-ul {
-    list-style-type: none;
-}
-
 button {
     background-color: darkblue;
     border: none;
     color: white;
-    font-size: 16px;
+    border-radius: 10%;
 }
 
-
-header {
-    background-color: deepskyblue;
+@media screen and (min-width:769px) {
+    .indexGridContainer {
+        display: grid;
+        margin: 10px;
+        column-gap: 10px;
+        grid-template-columns: 3fr 3fr 4fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "titulo titulo imagen"
+        "parrafo parrafo imagen"
+        "botones botones imagen";
+    }
 }
 
-main {
-    background-color: lightskyblue;
+@media screen and (max-width:768px) {
+    .indexGridContainer {
+        display: grid;
+        margin: 10px;
+        row-gap: 10px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "titulo titulo"
+        "parrafo parrafo"
+        "botones botones"
+        "imagen imagen";
+    }
 }
 
-footer {
-    background-color: dodgerblue;
+.titulo {
+    grid-area: titulo;
+    text-align: center;
+}
+
+.parrafo {
+    grid-area: parrafo;
+}
+
+.botones {
+    grid-area: botones;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.imagen {
+    grid-area: imagen;
+    border-left: 3px;
+    align-self: center;
+}
+
+.parrafo p {
+    width: 100%;
+}
+
+.imagen img {
+    width: 100%;
+    object-fit: contain;
 }
 /*REORGANIZAR EL CODIGO PARA QUE SEA MAS LEGIBLE*/  
-
-nav {
-    color: firebrick;
-}
