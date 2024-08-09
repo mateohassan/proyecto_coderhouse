@@ -64,14 +64,24 @@ button {
 @media screen and (max-width:768px) {
     .indexGridContainer {
         display: grid;
-        row-gap: 10px;
         grid-template-columns: auto;
         grid-template-rows: auto;
         grid-template-areas:
-        "titulo titulo"
+        "titulo precio"
         "parrafo parrafo"
-        "botones botones"
         "imagen imagen";
+    }
+}
+
+@media screen and (min-width:769px) {
+    .serviciosGridContainer {
+        display: grid;
+        margin: 10px;
+        grid-template-columns: 3fr 3fr 4fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "titulo precio imagen"
+        "parrafo parrafo imagen";
     }
 }
 
@@ -80,8 +90,14 @@ button {
     text-align: center;
 }
 
+.precio {
+    grid-area: precio;
+    text-align: center;
+}
+
 .parrafo {
     grid-area: parrafo;
+    text-align: center;
 }
 
 .botones {
