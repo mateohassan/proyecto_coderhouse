@@ -4,4 +4,4 @@
 · La página de Contacto está diseñada exclusivamante en Box Model, y evita usar contenido mas avanzado.\
 · La página Sobre Nosotros está estructurada con Flexbox.\
 · Todas las páginas deberían aparecer correctamente en celulares, tablets y monitores.\
-· El archivo de CSS está ordenado en secciones separadas por comentarios.\
+· El archivo de CSS está ordenado en secciones separadas por comentarios.
