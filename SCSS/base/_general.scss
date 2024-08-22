@@ -1,0 +1,20 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family:Inconsolata, monospace;
+    font-size: large;
+    overflow-x: hidden;
+}
+
+main {
+    flex-grow: 1;    
+    background-color: lightskyblue;
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
+    padding: 10px;
+}
+
+.logo {
+    width: 70px;
+}

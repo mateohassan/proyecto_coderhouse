@@ -10,12 +10,12 @@ body {
 
 header {
     font-size: larger;
-    background-color: deepskyblue;
+    background-color: #00bfff;
 }
 
 main {
     flex-grow: 1;    
-    background-color: lightskyblue;
+    background-color: #87cefa;
     border-top: 3px solid gray;
     border-bottom: 3px solid gray;
     padding: 10px;
@@ -24,14 +24,11 @@ main {
 footer {
     border: none;
     font-size: larger;
-    background-color: dodgerblue;
+    background-color: #1e90ff;
 }
 
 .navbar-brand {
     max-width: 200px;
-}
-
-.marca {
     font-family:Caveat;
     font-weight: 700;
     font-size: 2em;
@@ -40,8 +37,6 @@ footer {
 .logo {
     width: 70px;
 }
-
-
 
 /*Areas de grids*/
 .titulo {
@@ -136,6 +131,18 @@ iframe {
     height: 400px;
     border-radius: 10px;
     border: 3px solid black;
+}
+
+.nosotrosText {
+    display: flex;
+    flex-direction: column;
+}
+
+.nosotrosImages {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
 }
 
 .producto1, .producto2, .producto3, .producto4 {
@@ -247,36 +254,16 @@ iframe {
 }
 
 @media screen and (min-width:769px) {
-    .allContainer {
+    .nosotrosContainer {
         display: flex;
         flex-direction: row;
     }
 
     .nosotrosText {
-        display: flex;
-        flex-direction: column;
         width: 60%;
     }
 
     .nosotrosImages {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        align-items: center;
         width: 40%;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .nosotrosText {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nosotrosImages {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        align-items: center;
     }
 }
