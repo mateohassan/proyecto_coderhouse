@@ -49,6 +49,17 @@ iframe {
 @for $x from 1 through 4 {
     .producto#{$x} {
         grid-area: producto#{$x};
-        @extend %productoBase
+        @extend %productoBase;
+    }
+}
+
+@for $a from 1 through 8 {
+    .anim#{$a} {
+        transform: scale(1) rotate(0);
+        transition: 1s;
+    }
+    
+    .trigger#{$a}:hover > .anim#{$a} {
+        transform: scale(1.2) rotate(-5deg);
     }
 }

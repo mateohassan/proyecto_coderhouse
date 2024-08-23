@@ -149,6 +149,78 @@ iframe {
   grid-area: producto4;
 }
 
+.anim1 {
+  transform: scale(1) rotate(0);
+  transition: 1s;
+}
+
+.trigger1:hover > .anim1 {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.anim2 {
+  transform: scale(1) rotate(0);
+  transition: 1s;
+}
+
+.trigger2:hover > .anim2 {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.anim3 {
+  transform: scale(1) rotate(0);
+  transition: 1s;
+}
+
+.trigger3:hover > .anim3 {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.anim4 {
+  transform: scale(1) rotate(0);
+  transition: 1s;
+}
+
+.trigger4:hover > .anim4 {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.anim5 {
+  transform: scale(1) rotate(0);
+  transition: 1s;
+}
+
+.trigger5:hover > .anim5 {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.anim6 {
+  transform: scale(1) rotate(0);
+  transition: 1s;
+}
+
+.trigger6:hover > .anim6 {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.anim7 {
+  transform: scale(1) rotate(0);
+  transition: 1s;
+}
+
+.trigger7:hover > .anim7 {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+.anim8 {
+  transform: scale(1) rotate(0);
+  transition: 1s;
+}
+
+.trigger8:hover > .anim8 {
+  transform: scale(1.2) rotate(-5deg);
+}
+
 @media screen and (min-width: 769px) {
   .indexGridContainer {
     display: grid;
