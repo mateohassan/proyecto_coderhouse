@@ -9,9 +9,9 @@ body {
 
 main {
   flex-grow: 1;
-  background-color: lightskyblue;
-  border-top: 3px solid gray;
-  border-bottom: 3px solid gray;
+  background-color: #87cefa;
+  border-top: 3px solid #a1a1a1;
+  border-bottom: 3px solid #a1a1a1;
   padding: 10px;
 }
 
