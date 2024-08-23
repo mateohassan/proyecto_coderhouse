@@ -81,22 +81,6 @@ footer {
   align-self: center;
 }
 
-.producto1 {
-  grid-area: producto1;
-}
-
-.producto2 {
-  grid-area: producto2;
-}
-
-.producto3 {
-  grid-area: producto3;
-}
-
-.producto4 {
-  grid-area: producto4;
-}
-
 button {
   background-color: darkblue;
   border: none;
@@ -139,7 +123,38 @@ iframe {
   align-items: center;
 }
 
-.producto1, .producto2, .producto3, .producto4 {
+.producto1 {
+  grid-area: producto1;
+  display: flex;
+  flex-direction: column;
+  background-color: #a1a1a1;
+  padding: 5px;
+  margin: 5px;
+  border: 3px solid black;
+}
+
+.producto2 {
+  grid-area: producto2;
+  display: flex;
+  flex-direction: column;
+  background-color: #a1a1a1;
+  padding: 5px;
+  margin: 5px;
+  border: 3px solid black;
+}
+
+.producto3 {
+  grid-area: producto3;
+  display: flex;
+  flex-direction: column;
+  background-color: #a1a1a1;
+  padding: 5px;
+  margin: 5px;
+  border: 3px solid black;
+}
+
+.producto4 {
+  grid-area: producto4;
   display: flex;
   flex-direction: column;
   background-color: #a1a1a1;
