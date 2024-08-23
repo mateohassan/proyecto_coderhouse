@@ -9,9 +9,9 @@ body {
 
 main {
     flex-grow: 1;    
-    background-color: lightskyblue;
-    border-top: 3px solid gray;
-    border-bottom: 3px solid gray;
+    background-color: $backgroundColor;
+    border-top: 3px solid $edgesColor;
+    border-bottom: 3px solid $edgesColor;
     padding: 10px;
 }
 
