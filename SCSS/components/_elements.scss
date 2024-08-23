@@ -1,8 +1,8 @@
 button {
     background-color: darkblue;
+    @extend %border;
     border: none;
     color: white;
-    border-radius: 10px;
 }
 
 form {
@@ -10,9 +10,8 @@ form {
 }
 
 input, textarea {
-    width: 95%;
-    border-radius: 10px;
-    border: 3px solid black;
+    @include size(95%);
+    @extend %border;
     margin: 5px;
     display: block;
 }
@@ -22,10 +21,8 @@ input, textarea {
 }
 
 iframe {
-    width: 100%;
-    height: 400px;
-    border-radius: 10px;
-    border: 3px solid black;
+    @include size(100%, 400px);
+    @extend %border;
 }
 
 .nosotrosText {
@@ -40,14 +37,18 @@ iframe {
     align-items: center;
 }
 
+%productoBase {
+    display: flex;
+    flex-direction: column;
+    background-color: #a1a1a1;
+    padding: 5px;
+    margin: 5px;
+    @extend %border;
+}
+
 @for $x from 1 through 4 {
     .producto#{$x} {
         grid-area: producto#{$x};
-        display: flex;
-        flex-direction: column;
-        background-color: #a1a1a1;
-        padding: 5px;
-        margin: 5px;
-        border: 3px solid black;
+        @extend %productoBase
     }
 }

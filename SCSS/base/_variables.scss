@@ -6,3 +6,15 @@ $edgesColor: #a1a1a1;
 $mobileBreakpoint: 480px;
 $tabletBreakpoint: 768px;
 $desktopBreakpoint: 769px;
+
+@mixin size($width, $height: null) {
+    width: $width;
+    @if $height != null {
+    height: $height;
+    }
+}
+
+%border {
+    border: 3px solid black;
+    border-radius: 10px;
+}

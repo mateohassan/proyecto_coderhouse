@@ -13,7 +13,7 @@
     text-align: center;
 
     p {
-        width: 100%;
+        @include size(100%);
     }
 }
 
@@ -30,18 +30,23 @@
     align-self: center;
 
     img {
-        width: 100%;
+        @include size(100%);
+        @extend %border;
         object-fit: contain;
+        border-width: 2px;
     }
 }
 
 .nosotrosImages img {
-    width: 75%;
+    @include size(75%);
     margin: 20px;
+    @extend %border;
+    border-width: 2px;
 }
 
 
 .productoCarousel {
     grid-area: productoCarousel;
     align-self: center;
+    @extend %border;
 }
