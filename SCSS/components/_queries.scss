@@ -1,0 +1,104 @@
+.indexGridContainer {
+    @media screen and (min-width:$desktopBreakpoint) {
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: 3fr 3fr 4fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "titulo titulo imagen"
+        "parrafo parrafo imagen"
+        "botones botones imagen";
+    }
+
+    @media screen and (max-width:$tabletBreakpoint) {
+        display: grid;
+        row-gap: 10px;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "titulo titulo"
+        "parrafo parrafo"
+        "botones botones"
+        "imagen imagen";
+    }
+}
+
+.productosGridContainer {
+    @media screen and (min-width:$desktopBreakpoint) {
+        display: grid;
+        column-gap: 10px;
+        grid-template-columns: 4fr 3fr 3fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "titulo titulo titulo"
+        "productoCarousel producto1 producto2"
+        "productoCarousel producto3 producto4";
+    }
+
+    @media screen and (max-width:$tabletBreakpoint) {
+        display: grid;
+        grid-template-areas:
+        "titulo titulo"
+        "productoCarousel producto1"
+        "productoCarousel producto2"
+        "producto3 producto4";
+    }
+
+    @media screen and (max-width:$mobileBreakpoint) {
+        display: grid;
+        grid-template-areas:
+        "titulo"
+        "productoCarousel"
+        "producto1"
+        "producto2"
+        "producto3"
+        "producto4";
+
+        .producto1, .producto2, .producto3, .producto4 {
+            display: grid;
+            align-content: center;
+            grid-template-areas: 
+            "imagen titulo"
+            "imagen precio";
+            .tituloProducto {
+                align-self: center;
+                grid-area: titulo;
+            }
+            
+            .precioProducto {
+                align-self: center;
+                grid-area: precio;
+            }
+            
+            img {
+                grid-area: imagen;
+            }
+        }
+    }
+}
+
+.serviciosGridContainer {
+    @media screen and (min-width:769px) {
+        display: grid;
+        margin: 10px;
+        grid-template-columns: 3fr 3fr 4fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "titulo precio imagen"
+        "parrafo parrafo imagen";
+    }
+}
+
+.nosotrosContainer {
+    @media screen and (min-width:$desktopBreakpoint) {
+        display: flex;
+        flex-direction: row;
+        .nosotrosText {
+            @include size(60%);
+        }
+
+        .nosotrosImages {
+            @include size(60%);
+        }
+    }
+}

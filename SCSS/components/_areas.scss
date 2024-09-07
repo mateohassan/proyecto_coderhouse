@@ -1,0 +1,51 @@
+.titulo {
+    grid-area: titulo;
+    text-align: center;
+}
+
+.precio {
+    grid-area: precio;
+    text-align: center;
+}
+
+.parrafo {
+    grid-area: parrafo;
+    text-align: center;
+
+    p {
+        @include size(100%);
+    }
+}
+
+.botones {
+    grid-area: botones;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.imagen {
+    grid-area: imagen;
+    border-left: 3px;
+    align-self: center;
+
+    img {
+        @include size(100%);
+        @extend %border;
+        object-fit: contain;
+        border-width: 2px;
+    }
+}
+
+.nosotrosImages img {
+    @include size(75%);
+    margin: 20px;
+    @extend %border;
+    border-width: 2px;
+}
+
+.productoCarousel {
+    grid-area: productoCarousel;
+    align-self: center;
+    @extend %border;
+}
