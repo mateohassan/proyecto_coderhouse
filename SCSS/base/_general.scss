@@ -5,13 +5,12 @@ body {
     font-family:Inconsolata, monospace;
     font-size: large;
     overflow-x: hidden;
+    background-image: linear-gradient($headerColor, $backgroundColor, $footerColor);
+    background-attachment: local;
 }
 
 main {
-    flex-grow: 1;    
-    background-color: $backgroundColor;
-    border-top: 3px solid $edgesColor;
-    border-bottom: 3px solid $edgesColor;
+    flex-grow: 1;
     padding: 10px;
 }
 

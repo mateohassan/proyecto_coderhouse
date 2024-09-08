@@ -1,3 +1,7 @@
+.indexMain {
+    align-content: center;
+}
+
 button {
     background-color: darkblue;
     @extend %border;
@@ -25,6 +29,12 @@ iframe {
     @extend %border;
 }
 
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .nosotrosText {
     display: flex;
     flex-direction: column;
@@ -37,29 +47,43 @@ iframe {
     align-items: center;
 }
 
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.precioProducto {
+    font-size: large;
+}
+
+.oferta {
+    font-size: x-large;
+}
+
 %productoBase {
     display: flex;
     flex-direction: column;
-    background-color: #a1a1a1;
+    background-color: #ffffff;
     padding: 5px;
-    margin: 5px;
     @extend %border;
+    img {
+        max-width: 100%;
+    }
 }
 
-@for $x from 1 through 4 {
+@for $x from 0 through 4 {
     .producto#{$x} {
         grid-area: producto#{$x};
         @extend %productoBase;
+        margin: 5px;
     }
 }
 
-@for $a from 1 through 8 {
-    .anim#{$a} {
-        transform: scale(1) rotate(0);
-        transition: 1s;
-    }
-    
-    .trigger#{$a}:hover > .anim#{$a} {
-        transform: scale(1.2) rotate(-5deg);
-    }
+.anim {
+    transform: scale(1) rotate(0);
+    transition: 1s;
+}
+
+.trigger:hover > .anim {
+    transform: scale(1.05) rotate(-3deg);
 }

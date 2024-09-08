@@ -1,11 +1,13 @@
 .titulo {
     grid-area: titulo;
     text-align: center;
+    align-self: center;
 }
 
 .precio {
     grid-area: precio;
     text-align: center;
+    align-self: center;
 }
 
 .parrafo {
@@ -47,5 +49,4 @@
 .productoCarousel {
     grid-area: productoCarousel;
     align-self: center;
-    @extend %border;
 }

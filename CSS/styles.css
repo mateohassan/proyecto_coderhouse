@@ -1,4 +1,4 @@
-.producto4, .producto3, .producto2, .producto1, iframe, input, textarea, button, .productoCarousel, .nosotrosImages img, .imagen img {
+.producto4, .producto3, .producto2, .producto1, .producto0, iframe, input, textarea, button, .nosotrosImages img, .imagen img {
   border: 3px solid black;
   border-radius: 10px;
 }
@@ -10,13 +10,12 @@ body {
   font-family: Inconsolata, monospace;
   font-size: large;
   overflow-x: hidden;
+  background-image: linear-gradient(#00bfff, #95d6ff, #1e90ff);
+  background-attachment: local;
 }
 
 main {
   flex-grow: 1;
-  background-color: #87cefa;
-  border-top: 3px solid #a1a1a1;
-  border-bottom: 3px solid #a1a1a1;
   padding: 10px;
 }
 
@@ -25,8 +24,12 @@ main {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
   font-size: larger;
   background-color: #00bfff;
+  border-bottom: 3px solid #a1a1a1;
 }
 header nav div .navbar-brand {
   max-width: 200px;
@@ -38,17 +41,19 @@ header nav div .navbar-brand {
 footer {
   border: none;
   font-size: larger;
-  background-color: #1e90ff;
+  border-top: 3px solid #a1a1a1;
 }
 
 .titulo {
   grid-area: titulo;
   text-align: center;
+  align-self: center;
 }
 
 .precio {
   grid-area: precio;
   text-align: center;
+  align-self: center;
 }
 
 .parrafo {
@@ -88,6 +93,10 @@ footer {
   align-self: center;
 }
 
+.indexMain {
+  align-content: center;
+}
+
 button {
   background-color: darkblue;
   border: none;
@@ -113,6 +122,12 @@ iframe {
   height: 400px;
 }
 
+.col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .nosotrosText {
   display: flex;
   flex-direction: column;
@@ -125,100 +140,61 @@ iframe {
   align-items: center;
 }
 
-.producto4, .producto3, .producto2, .producto1 {
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.precioProducto {
+  font-size: large;
+}
+
+.oferta {
+  font-size: x-large;
+}
+
+.producto4, .producto3, .producto2, .producto1, .producto0 {
   display: flex;
   flex-direction: column;
-  background-color: #a1a1a1;
+  background-color: #ffffff;
   padding: 5px;
+}
+.producto4 img, .producto3 img, .producto2 img, .producto1 img, .producto0 img {
+  max-width: 100%;
+}
+
+.producto0 {
+  grid-area: producto0;
   margin: 5px;
 }
 
 .producto1 {
   grid-area: producto1;
+  margin: 5px;
 }
 
 .producto2 {
   grid-area: producto2;
+  margin: 5px;
 }
 
 .producto3 {
   grid-area: producto3;
+  margin: 5px;
 }
 
 .producto4 {
   grid-area: producto4;
+  margin: 5px;
 }
 
-.anim1 {
+.anim {
   transform: scale(1) rotate(0);
   transition: 1s;
 }
 
-.trigger1:hover > .anim1 {
-  transform: scale(1.2) rotate(-5deg);
-}
-
-.anim2 {
-  transform: scale(1) rotate(0);
-  transition: 1s;
-}
-
-.trigger2:hover > .anim2 {
-  transform: scale(1.2) rotate(-5deg);
-}
-
-.anim3 {
-  transform: scale(1) rotate(0);
-  transition: 1s;
-}
-
-.trigger3:hover > .anim3 {
-  transform: scale(1.2) rotate(-5deg);
-}
-
-.anim4 {
-  transform: scale(1) rotate(0);
-  transition: 1s;
-}
-
-.trigger4:hover > .anim4 {
-  transform: scale(1.2) rotate(-5deg);
-}
-
-.anim5 {
-  transform: scale(1) rotate(0);
-  transition: 1s;
-}
-
-.trigger5:hover > .anim5 {
-  transform: scale(1.2) rotate(-5deg);
-}
-
-.anim6 {
-  transform: scale(1) rotate(0);
-  transition: 1s;
-}
-
-.trigger6:hover > .anim6 {
-  transform: scale(1.2) rotate(-5deg);
-}
-
-.anim7 {
-  transform: scale(1) rotate(0);
-  transition: 1s;
-}
-
-.trigger7:hover > .anim7 {
-  transform: scale(1.2) rotate(-5deg);
-}
-
-.anim8 {
-  transform: scale(1) rotate(0);
-  transition: 1s;
-}
-
-.trigger8:hover > .anim8 {
-  transform: scale(1.2) rotate(-5deg);
+.trigger:hover > .anim {
+  transform: scale(1.05) rotate(-3deg);
 }
 
 @media screen and (min-width: 769px) {
@@ -249,9 +225,10 @@ iframe {
     grid-template-areas: "titulo titulo titulo" "productoCarousel producto1 producto2" "productoCarousel producto3 producto4";
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 480px) {
   .productosGridContainer {
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "titulo titulo" "productoCarousel producto1" "productoCarousel producto2" "producto3 producto4";
   }
 }
@@ -264,6 +241,7 @@ iframe {
     display: grid;
     align-content: center;
     grid-template-areas: "imagen titulo" "imagen precio";
+    grid-template-columns: 1fr 1fr;
   }
   .productosGridContainer .producto1 .tituloProducto, .productosGridContainer .producto2 .tituloProducto, .productosGridContainer .producto3 .tituloProducto, .productosGridContainer .producto4 .tituloProducto {
     align-self: center;
@@ -284,6 +262,7 @@ iframe {
     margin: 10px;
     grid-template-columns: 3fr 3fr 4fr;
     grid-template-rows: auto;
+    column-gap: 10px;
     grid-template-areas: "titulo precio imagen" "parrafo parrafo imagen";
   }
 }
